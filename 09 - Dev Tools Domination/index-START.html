@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const dogs = [
+        { name: 'Snickers', age: 2 },
+        { name: 'hugo', age: 8 },
+      ]
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      function makeGreen() {
+        const p = document.querySelector('p')
+        p.style.color = '#BADA55'
+        p.style.fontSize = '50px'
+      }
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      // Regular
+      console.log('this is my log')
+      // Interpolated
+      let name = 'Charlie'
+      console.log(`my name is ${name}`)
+      // Styled
 
-    // Regular
+      // warning!
+      console.warn('this is warm')
+      // Error :|
+      console.error('this is error')
 
-    // Interpolated
+      // Info
+      // 跟log沒什麼差
+      // Testing
 
-    // Styled
+      // clearing
 
-    // warning!
+      // Viewing DOM Elements
+      console.dir() // 展開對象的屬性或功能
+      // Grouping together
+      console.table()
+      // counting
 
-    // Error :|
-
-    // Info
-
-    // Testing
-
-    // clearing
-
-    // Viewing DOM Elements
-
-    // Grouping together
-
-    // counting
-
-    // timing
-
-  </script>
-</body>
+      // timing
+    </script>
+  </body>
 </html>
